@@ -9,10 +9,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-const cars = require('./routes/cars')
+const formulas = require('./routes/formulas')
 
 
-app.use(cars)
+app.use(formulas)
 
 
 

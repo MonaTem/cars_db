@@ -1,28 +1,28 @@
 const knex = require('./knex')
 
 module.exports = {
-  cars: {
+  formulas: {
     getAll: function() {
-      return knex('car')
+      return knex('formulas')
     },
-    getOne: function(id) {
-      return knex('car')
-             .where('id', id)
+    getOne: function(fid) {
+      return knex('formulas')
+             .where('fid', fid)
     },
-    create: function(car) {
-      return knex('car')
-             .insert(car)
+    create: function(formulas) {
+      return knex('formulas')
+             .insert(formulas)
              .returning('*')
     },
-      update: function(id, car) {
-        return knex('car')
-               .where('id', id)
-               .update(car)
+      update: function(fid, formulas) {
+        return knex('formulas')
+               .where('fid', fid)
+               .update(formulas)
                .returning('*')
     },
-      delete: function(id) {
-        return knex('car')
-               .where('id', id)
+      delete: function(fid) {
+        return knex('formulas')
+               .where('fid', fid)
                .del()
     }
   }

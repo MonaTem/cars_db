@@ -1,25 +1,16 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('car').del()
+  return knex('formulas').del()
     .then(function () {
       // Inserts seed entries
-      return knex('car').insert([
+      return knex('formulas').insert([
         {
-          make: 'Toyota',
-          model: 'Highlander',
-          year: 2010
-      },
-        {
-          make: 'Audi',
-          model: 'Q5',
-          year: 2014
-      },
-        {
-          make: 'BMW',
-          model: 'X3',
-          year: 2004
+          fid:  1,
+          english_name: 'Meridian Circulation',
+          pinyin_name: 'Du Huo Ji Sheng Tang'
       }
+        
       ]);
     });
 };
